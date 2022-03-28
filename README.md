@@ -1,16 +1,19 @@
-### Hi there 👋
+### **Welcome to my profile 👋**
 
-<!--
-**marquis-dev/marquis-dev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+---
 
-Here are some ideas to get you started:
+- 🦾 Full Stack Developer
+- 💬 Ask me about anything related to Web Development
+- 📫 How to reach me [Email](mailto:aycs963@gmail.com)
+- 🗻 My main project is [GravityBot](https://discord.com/invite/gravitybot)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+**My status**
+
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img align="center" height="200px" width="500px" src="https://github-readme-stats.vercel.app/api?username=marquis-dev&show_icons=true&theme=tokyonight" />
+</a>
+<a href="https://github.com/anuraghazra/convoychat">
+  <img align="center" height="200px" width="500px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=tokyonight" />
+</a>
