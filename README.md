@@ -11,9 +11,10 @@
 
 **My status**
 
-<a href="https://github.com/anuraghazra/github-readme-stats">
+<a href="https://discord.com/invite/gravitybot">
   <img align="center" height="200px" src="https://github-readme-stats.vercel.app/api?username=marquis-dev&show_icons=true&theme=tokyonight" />
 </a>
-<a href="https://github.com/anuraghazra/convoychat">
+
+<a href="https://discord.com/invite/gravitybot">
   <img align="center" height="200px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=tokyonight" />
 </a>
