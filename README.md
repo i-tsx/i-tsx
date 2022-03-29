@@ -1,5 +1,7 @@
 ## **Welcome to my profile 👋**
 
+<img align="center" src="https://discord.c99.nl/widget/theme-1/417332680758394880.png"/> 
+
 - 🦾 Full Stack Developer
 - 💬 Ask me about anything related to Web Development
 - 📫 How to reach me [Email](mailto:aycs963@gmail.com)
