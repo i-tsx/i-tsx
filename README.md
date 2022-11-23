@@ -14,7 +14,7 @@
 </a>
 <br><br>
 <a href="https://discord.com/invite/gravitybot">
-  <img align="center" height="200px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=tokyonight" />
+  <img align="center" height="200px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eyun-dev&layout=compact&theme=tokyonight" />
 </a>
 
 ---
