@@ -5,7 +5,6 @@
 - 🦾 Full Stack Developer
 - 💬 Ask me about anything related to Web Development
 - 📫 How to reach me [Email](mailto:aycs963@gmail.com)
-- 🗻 My main project is [GravityBot](https://discord.com/invite/gravitybot)
 
 ## **Static 📊**
 
