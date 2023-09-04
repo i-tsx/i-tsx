@@ -1,6 +1,6 @@
 ## **Welcome to my profile 👋**
 
-<img align="center" src="https://discord.c99.nl/widget/theme-1/417332680758394880.png"/> 
+<img align="center" src="https://discord.c99.nl/widget/theme-1/1141770151243563151"/> 
 
 - 🦾 Full Stack Developer
 - 💬 Ask me about anything related to Web Development
