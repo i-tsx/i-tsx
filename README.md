@@ -1,14 +1,7 @@
 # 👋 Hey, I'm Abdullah
 
-Welcome to my GitHub! I'm a passionate **full-stack web developer** with over 3 years of experience. I specialize in building dynamic web applications, creating efficient backend systems, and developing exciting projects on platforms like **Discord**.
-
-I'm also the creator of **[simplifield-sql](https://www.npmjs.com/package/simplifield-sql)**, an NPM package that simplifies SQL operations for developers. Below, you'll find an overview of what I'm working on, my expertise, and how to connect with me.
-
----
-
-## 🚀 What I'm Currently Working On
-- **GravityBot** — A powerful Discord bot, which has earned over $1000 in revenue.  
-- **NestJS Guide** — Writing a book on setting up and using NestJS.
+Welcome to my GitHub! I'm a passionate **full-stack web developer** with over 3 years of experience. I specialize in building dynamic web applications, creating efficient backend systems, and developing exciting projects.
+Below, you'll find an overview of my expertise, and how to connect with me.
 
 ---
 
@@ -18,13 +11,12 @@ I'm also the creator of **[simplifield-sql](https://www.npmjs.com/package/simpli
 - **Backend**: Node.js, Express.js, NestJS
 - **Databases**: MySQL, MongoDB, PostgreSQL
 - **Tools**: Git, Docker, Postman, VSCode
-- **Discord Development**: Eris, discord.js, command handlers, optimization techniques
 
 ---
 
 ## 📚 Latest Projects
 - **[simplifield-sql](https://www.npmjs.com/package/simplifield-sql)** — My NPM package to streamline SQL operations.
-- **GravityBot** — A popular Discord bot that provides server management and premium features.
+- **GravityBot** — A popular Discord bot that provides server management and security features.
 
 ---
 
@@ -36,7 +28,6 @@ I'm also the creator of **[simplifield-sql](https://www.npmjs.com/package/simpli
 ---
 
 ## 🏆 Achievements
-- Creator of **GravityBot**.
 - **#1 Winner** in the **UAE AI Competition**.
 
 ---
@@ -50,7 +41,7 @@ Feel free to connect with me for collaboration or discussions:
 ---
 
 ## 🔥 Fun Facts
-- I love diving deep into **Discord bot development** and pushing the limits of what bots can do.
+- I love diving deep into **Web development** and pushing the limits of what websites can do.
 - Passionate about learning new **tech stacks** and staying on top of the latest trends.
 - **Always open** to interesting project ideas and collaborations!
 
