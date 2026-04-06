@@ -14,9 +14,6 @@
   <a href="https://www.npmjs.com/package/simplifield-sql">
     <img src="https://img.shields.io/badge/simplifield--sql-NPM-orange?style=for-the-badge&logo=npm" alt="simplifield-sql">
   </a>
-  <a href="https://discord.com/invite/gravitybot">
-    <img src="https://img.shields.io/badge/GravityBot-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="GravityBot">
-  </a>
   <a href="https://www.linkedin.com/in/abdullah-chebli-244240279/">
     <img src="https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
