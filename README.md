@@ -1,61 +1,63 @@
-# 👋 Hey, I'm Abdullah
+# 👋 Hi, I’m Abdullah
 
-Welcome to my GitHub! I'm a passionate **full-stack web developer** with over 3 years of experience. I specialize in building dynamic web applications, creating efficient backend systems, and developing exciting projects.
-Below, you'll find an overview of my expertise, and how to connect with me.
-
----
-
-## 💻 Tech Stack & Expertise
-- **Languages**: JavaScript, TypeScript, SQL, HTML, CSS
-- **Frontend**: React, Next.js, Tailwind CSS, Bootstrap
-- **Backend**: Node.js, Express.js, NestJS
-- **Databases**: MySQL, MongoDB, PostgreSQL
-- **Tools**: Git, Docker, Postman, VSCode
+Full-stack web developer & tech enthusiast from Syria. I love building **dynamic web apps**, **Discord bots**, and exploring **AI & performance optimization**.
 
 ---
 
-## 📚 Latest Projects
-- **[simplifield-sql](https://www.npmjs.com/package/simplifield-sql)** — My NPM package to streamline SQL operations.
-- **GravityBot** — A popular Discord bot that provides server management and security features.
+## 💻 Tech Stack
+
+**Languages:** JavaScript | TypeScript | SQL | HTML | CSS  
+**Frontend:** React | Next.js | Tailwind CSS | Bootstrap  
+**Backend:** Node.js | Express.js | NestJS  
+**Databases:** MySQL | MongoDB | PostgreSQL  
+**Tools:** Git | Docker | Postman | VSCode
 
 ---
 
-## 🌱 Learning & Exploring
-- Building **online stores** and exploring e-commerce solutions.
-- Enhancing **performance optimization** techniques for Discord bots.
-- Experimenting with **AI** and machine learning concepts.
+## 🚀 Featured Projects
+
+* **[simplifield-sql](https://www.npmjs.com/package/simplifield-sql)** — Streamlining SQL operations with ease.  
+* **GravityBot** — A Discord bot in **5,000+ servers** for management, security, and entertainment.
 
 ---
 
 ## 🏆 Achievements
-- **#1 Winner** in the **UAE AI Competition**.
+
+* **#1 Winner** — UAE AI Competition  
+* Earned **$1,000+** from Discord bots
 
 ---
 
-## 📫 How to Reach Me
-Feel free to connect with me for collaboration or discussions:
-- **Email**: aycs963@gmail.com
-- **LinkedIn**: [Abdullah Chebli](https://www.linkedin.com/in/abdullah-chebli-244240279/)
-- **Twitter**: [@itsx18](https://x.com/itsx18)
+## 🌱 Current Focus
+
+* Building **online stores** and e-commerce solutions  
+* Optimizing **Discord bot performance**  
+* Exploring **AI & machine learning**
 
 ---
 
-## 🔥 Fun Facts
-- I love diving deep into **Web development** and pushing the limits of what websites can do.
-- Passionate about learning new **tech stacks** and staying on top of the latest trends.
-- **Always open** to interesting project ideas and collaborations!
+## 📫 Connect with Me
+
+* **Email:** [aycs963@gmail.com](mailto:aycs963@gmail.com)  
+* **LinkedIn:** [Abdullah Chebli](https://www.linkedin.com/in/abdullah-chebli-244240279/)
 
 ---
 
-Thanks for visiting my profile! If you find my work helpful or interesting, don't forget to ⭐ some of my repositories!
+### 📊 GitHub Stats
 
----
+<p align="center">
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=i-tsx&show_icons=true&count_private=true&include_all_commits=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/streak?username=i-tsx&theme=tokyonight&hide_border=true" height="165" alt="GitHub Streak" />
+</p>
 
-### 📊 Statistics
-<a href="https://discord.com/invite/gravitybot">
-  <img align="center" height="200px" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=i-tsx&theme=ayu_mirage" />
-</a>
-<br><br>
-<a href="https://discord.com/invite/gravitybot">
-  <img align="center" height="200px" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=i-tsx&theme=ayu_mirage" />
-</a>
+<p align="center">
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=i-tsx&layout=compact&langs_count=8&theme=tokyonight&hide_border=true" height="165" alt="Top Languages" />
+</p>
+
+<p align="center">
+  <img src="https://trophy.ryglcloud.net/?username=i-tsx&theme=tokyonight&no-frame=true&margin-w=10&row=1&column=6" alt="Trophies" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=i-tsx&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" />
+</p>
