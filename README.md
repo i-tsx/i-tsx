@@ -1,49 +1,71 @@
-# 👋 Hi, I’m Abdullah
+<h1 align="center">👋 Hi, I'm Abdullah Chebli!</h1>
 
-Full-stack web developer & tech enthusiast from Syria. I love building **dynamic web apps**, **Discord bots**, and exploring **AI & performance optimization**.
+<h3 align="center">🚀 Full-Stack Web Developer | Discord Bot Creator | AI & Performance Enthusiast</h3>
 
----
+<p align="center">
+  <b>JavaScript ⚡ | TypeScript 🌀 | React ⚛️ | Next.js 🌐 | Node.js 🖥️ | NestJS 🛠️ | SQL & NoSQL 🗄️ | Tailwind CSS 🎨</b>
+</p>
 
-## 💻 Tech Stack
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=i-tsx&label=Profile%20Views&color=brightgreen&style=for-the-badge" alt="Profile Views" />
+</p>
 
-**Languages:** JavaScript | TypeScript | SQL | HTML | CSS  
-**Frontend:** React | Next.js | Tailwind CSS | Bootstrap  
-**Backend:** Node.js | Express.js | NestJS  
-**Databases:** MySQL | MongoDB | PostgreSQL  
-**Tools:** Git | Docker | Postman | VSCode
-
----
-
-## 🚀 Featured Projects
-
-* **[simplifield-sql](https://www.npmjs.com/package/simplifield-sql)** — Streamlining SQL operations with ease.  
-* **GravityBot** — A Discord bot in **5,000+ servers** for management, security, and entertainment.
-
----
-
-## 🏆 Achievements
-
-* **#1 Winner** — UAE AI Competition  
-* Earned **$1,000+** from Discord bots
+<p align="center">
+  <a href="https://www.npmjs.com/package/simplifield-sql">
+    <img src="https://img.shields.io/badge/simplifield--sql-NPM-orange?style=for-the-badge&logo=npm" alt="simplifield-sql">
+  </a>
+  <a href="https://discord.com/invite/gravitybot">
+    <img src="https://img.shields.io/badge/GravityBot-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="GravityBot">
+  </a>
+  <a href="https://www.linkedin.com/in/abdullah-chebli-244240279/">
+    <img src="https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+</p>
 
 ---
 
-## 🌱 Current Focus
+### 🌟 About Me
 
-* Building **online stores** and e-commerce solutions  
-* Optimizing **Discord bot performance**  
-* Exploring **AI & machine learning**
-
----
-
-## 📫 Connect with Me
-
-* **Email:** [aycs963@gmail.com](mailto:aycs963@gmail.com)  
-* **LinkedIn:** [Abdullah Chebli](https://www.linkedin.com/in/abdullah-chebli-244240279/)
+- 🔹 Full-stack web developer with **3+ years of experience** in building dynamic applications.  
+- ⚡ Creator of **GravityBot**, a Discord bot active in **5,000+ servers**.  
+- 💡 Passionate about **AI, performance optimization, and scalable backend systems**.  
+- 🖥️ Experienced in modern **frontend frameworks, backend architecture, and database management**.  
+- 🤝 Open to collaboration, mentorship, and exciting project ideas.
 
 ---
 
-### 📊 GitHub Stats
+### 💻 Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,nestjs,html,css,mysql,mongodb,postgres,git,docker&theme=dark" alt="Skills" />
+</p>
+
+---
+
+### 🚀 Featured Projects
+
+| Project | Description | Link |
+|---------|-------------|------|
+| **simplifield-sql** | NPM package to streamline SQL queries | [NPM](https://www.npmjs.com/package/simplifield-sql) |
+
+---
+
+### 🏆 Achievements
+
+- **#1 Winner** — UAE AI Competition  
+- Earned **$1,000+** from Discord bots  
+
+---
+
+### 🌱 Currently Learning
+
+- Building **online stores** and **e-commerce solutions**  
+- Optimizing **Discord bot performance**  
+- Exploring **AI & machine learning concepts**
+
+---
+
+### 📊 GitHub Stats & Activity
 
 <p align="center">
   <img src="https://github-readme-stats-fast.vercel.app/api?username=i-tsx&show_icons=true&count_private=true&include_all_commits=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub Stats" />
@@ -61,3 +83,9 @@ Full-stack web developer & tech enthusiast from Syria. I love building **dynamic
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=i-tsx&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" />
 </p>
+
+---
+
+<div align="center">
+### ⭐ If you find my work useful, don't forget to star ⭐ my repositories and connect with me!
+</div>
