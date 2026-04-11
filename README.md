@@ -1,4 +1,4 @@
-<h1 align="center">👋 Hi, I'm Abdullah Chebli!</h1>
+<h1 align="center">👋 Hi, I'm Abdullah El Chebli Chadid!</h1>
 
 <h3 align="center">🚀 Full-Stack Web Developer | Discord Bot Creator | AI & Performance Enthusiast</h3>
 
@@ -83,6 +83,4 @@
 
 ---
 
-<div align="center">
 ### ⭐ If you find my work useful, don't forget to star ⭐ my repositories and connect with me!
-</div>
