@@ -1,1 +1,191 @@
-<div>Testing</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Personal portfolio website showcasing projects, skills, and contact information."
+  />
+  <title>Abdullah El Chebli Chadid | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <header class="site-header" >
+    <a class="brand" href="#top">AC.</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero reveal" id="hero" id="top">
+      <p class="eyebrow">Open to full-time and freelance work</p>
+      <h1>
+        Hi, I am <span class="accent" id="profile-name">Abdullah El Chebli Chadid</span>.<br />
+        I build scalable products and high-impact developer tools.
+      </h1>
+      <p class="hero-copy" id="profile-bio">
+        Full Stack Developer focused on AI, performance optimization, scalable backend systems,
+        and polished frontend experiences.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" id="github-link" href="https://github.com/i-tsx" target="_blank" rel="noreferrer">GitHub Profile</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/abdullah-chebli-244240279/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <ul class="hero-stats" aria-label="Quick profile highlights">
+        <li><strong id="stat-years">5+</strong> Years on GitHub</li>
+        <li><strong id="stat-repos">9</strong> Public repositories</li>
+        <li><strong id="stat-followers">1</strong> GitHub followers</li>
+      </ul>
+    </section>
+
+    <section class="about reveal" id="about">
+      <div>
+        <p class="section-tag">About</p>
+        <h2>Building practical, reliable systems with product focus.</h2>
+      </div>
+      <p>
+        Full-stack web developer with 3+ years of experience, creator of GravityBot running in 5,000+ servers,
+        and a builder who enjoys performance-focused architectures, AI-driven features, and strong DX.
+      </p>
+    </section>
+
+    <section class="skills reveal" id="skills">
+      <p class="section-tag">Skills</p>
+      <h2>Tools and technologies I rely on every day.</h2>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Frontend</h3>
+          <p>React, Next.js, TypeScript, HTML, CSS, and responsive interface engineering.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Backend</h3>
+          <p>Node.js, NestJS, SQL/NoSQL design, API architecture, and optimization.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Workflow</h3>
+          <p>Git, Docker, package publishing, maintainable architecture, and production delivery.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="projects reveal" id="projects">
+      <div class="section-head">
+        <p class="section-tag">Projects</p>
+        <h2>Selected work</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card" data-project-card>
+          <p class="project-type" data-project-language>TypeScript</p>
+          <h3 data-project-name>simplifield-sql</h3>
+          <p data-project-description>
+            NPM package to streamline SQL query usage and improve developer productivity.
+          </p>
+          <div class="chip-row" data-project-meta>
+            <span>npm</span><span>sql</span><span>typescript</span>
+          </div>
+          <a data-project-link href="https://www.npmjs.com/package/simplifield-sql" target="_blank" rel="noreferrer">Open Project</a>
+        </article>
+
+        <article class="project-card" data-project-card>
+          <p class="project-type" data-project-language>TypeScript</p>
+          <h3 data-project-name>stavo-e-commerce</h3>
+          <p data-project-description>
+            A React-based e-commerce UI project focused on clean shopping flows and modern UX.
+          </p>
+          <div class="chip-row" data-project-meta>
+            <span>react</span><span>ui</span><span>e-commerce</span>
+          </div>
+          <a data-project-link href="https://github.com/i-tsx/stavo-e-commerce" target="_blank" rel="noreferrer">Open Repository</a>
+        </article>
+
+        <article class="project-card" data-project-card>
+          <p class="project-type" data-project-language>JavaScript</p>
+          <h3 data-project-name>SystemBot</h3>
+          <p data-project-description>
+            Discord.js system bot designed to automate and support complete server operations.
+          </p>
+          <div class="chip-row" data-project-meta>
+            <span>discord.js</span><span>node.js</span><span>automation</span>
+          </div>
+          <a data-project-link href="https://github.com/i-tsx/SystemBot" target="_blank" rel="noreferrer">Open Repository</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience reveal" id="experience">
+      <p class="section-tag">Milestones</p>
+      <h2>Highlights from GitHub and project work</h2>
+      <div class="timeline">
+        <article>
+          <h3>Profile Activity</h3>
+          <p class="muted">GitHub account since 2020</p>
+          <p>Consistent open-source activity across bot tooling, packages, and full-stack web apps.</p>
+        </article>
+        <article>
+          <h3>Competition Achievement</h3>
+          <p class="muted">UAE AI Competition</p>
+          <p>#1 winner with a strong focus on practical AI problem-solving and delivery.</p>
+        </article>
+        <article>
+          <h3>Discord Bot Ecosystem</h3>
+          <p class="muted">5,000+ server impact</p>
+          <p>Built and maintained Discord bots that reached real communities at production scale.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact reveal" id="contact">
+      <div>
+        <p class="section-tag">Contact</p>
+        <h2>Let us build something memorable.</h2>
+        <p>
+          Reach out through GitHub or LinkedIn for collaborations, freelance work, and product ideas.
+        </p>
+        <div class="contact-links">
+          <a href="https://github.com/i-tsx" target="_blank" rel="noreferrer">github.com/i-tsx</a>
+          <a href="https://www.linkedin.com/in/abdullah-chebli-244240279/" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+          <a href="https://www.npmjs.com/package/simplifield-sql" target="_blank" rel="noreferrer">NPM: simplifield-sql</a>
+        </div>
+      </div>
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mzdypyoy"
+        method="post"
+        data-form-endpoint="https://formspree.io/f/mzdypyoy"
+      >
+        <input type="hidden" name="_subject" value="New portfolio contact message" />
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your full name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          Project brief
+          <textarea name="message" rows="5" placeholder="Tell me about your idea..." required></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Abdullah El Chebli Chadid. All rights reserved.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
