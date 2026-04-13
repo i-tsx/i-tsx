@@ -37,6 +37,7 @@ const observer = new IntersectionObserver(
         entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
       }
+      
     });
   },
   { threshold: 0.18 }
