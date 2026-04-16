@@ -94,7 +94,7 @@ const hydrateProjectCards = (repositories) => {
     const nameNode = card.querySelector("[data-project-name]");
     const descriptionNode = card.querySelector("[data-project-description]");
     const metaNode = card.querySelector("[data-project-meta]");
-    // const linkNode = card.querySelector("[data-project-link]");
+    const linkNode = card.querySelector("[data-project-link]");
 
     if (languageNode) {
       languageNode.textContent = repo.language || "Repository";
@@ -114,10 +114,10 @@ const hydrateProjectCards = (repositories) => {
       metaNode.innerHTML = `<span>${stars}</span><span>${visibility}</span><span>${repo.default_branch}</span>`;
     }
 
-    // if (linkNode) {
-    //   linkNode.href = repo.html_url;
-    //   linkNode.textContent = "Open Repository";
-    // }
+    if (linkNode) {
+     linkNode.href = repo.html_url;
+     linkNode.textContent = "Open Repository";
+    }
   });
 };
 
