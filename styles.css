@@ -54,7 +54,6 @@ body {
 }
 
 main,
-.site-header,
 .site-footer {
   width: min(1080px, 92vw);
   margin: 0 auto;
@@ -64,7 +63,7 @@ main,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.15rem 0;
+  padding: 1.15rem 2rem;
   position: sticky;
   top: 0;
   backdrop-filter: blur(8px);
@@ -113,6 +112,7 @@ main,
   border-radius: 999px;
   padding: 0.45rem 0.9rem;
   font-weight: 700;
+  color: var(--primary);
 }
 
 section {
