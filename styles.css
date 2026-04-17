@@ -77,6 +77,16 @@ main,
   text-decoration: none;
   color: var(--text);
   letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-image {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
 }
 
 .site-nav {
@@ -152,6 +162,20 @@ p {
   margin-top: 1.25rem;
   max-width: 60ch;
   color: var(--muted);
+}
+
+.major-badge {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--primary) 40%, var(--line));
+  background: color-mix(in srgb, var(--primary-soft) 70%, transparent);
+  color: #c5f3ff;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .accent {
