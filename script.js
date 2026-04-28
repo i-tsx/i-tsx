@@ -1,6 +1,7 @@
 // Translations
 const translations = {
   en: {
+    pageTitle: "Abdullah El Chebli",
     nav: {
       about: "About",
       skills: "Skills",
@@ -11,6 +12,7 @@ const translations = {
     hero: {
       eyebrow: "Open to full-time and freelance work",
       greeting: "Hi, I am",
+      name: "Abdullah El Chebli",
       headline: "I build scalable products and high-impact developer tools.",
       major: "Major: Mechanical Engineering (Design and Production)",
       github: "GitHub Profile",
@@ -89,17 +91,19 @@ const translations = {
     }
   },
   ar: {
+    pageTitle: "عبدالله الشبلي",
     nav: {
       about: "حول",
       skills: "المهارات",
       projects: "المشاريع",
-      experience: "التجارب",
+      experience: "الخبرات",
       contact: "تواصل"
     },
     hero: {
       eyebrow: "متاح للعمل بدوام كامل والعمل الحر",
       greeting: "مرحبا، أنا",
-      headline: "أبني منتجات قابلة للتوسع وأدوات تطوير عالية التأثير.",
+      name: "عبدالله الشبلي",
+      headline: "أبني منتجات قابلة للتوسع وأدوات تطوير عالية الجودة.",
       major: "التخصص: الهندسة الميكانيكية (التصميم والإنتاج)",
       github: "ملف GitHub",
       linkedin: "LinkedIn",
@@ -130,7 +134,7 @@ const translations = {
     },
     projects: {
       tag: "المشاريع",
-      heading: "أعمال مختارة",
+      heading: "أعمالي",
       openProject: "فتح المشروع",
       openRepo: "فتح المستودع"
     },
@@ -247,6 +251,7 @@ const setLanguage = (lang) => {
   localStorage.setItem("language", lang);
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.title = `${getTranslation("pageTitle")} | Portfolio`;
   applyTranslations();
 
   // Update language toggle button styles
@@ -384,8 +389,8 @@ const hydrateProfile = async () => {
     const user = await userResponse.json();
     const repos = await reposResponse.json();
 
-    if (profileName && user.name) {
-      profileName.textContent = user.name;
+    if (profileName) {
+      profileName.textContent = getTranslation("hero.name");
     }
 
     if (profileBio && user.bio) {

@@ -1,4 +1,4 @@
-<h1 align="center">👋 Hi, I'm Abdullah El Chebli Chadid!</h1>
+<h1 align="center">👋 Hi, I'm Abdullah El Chebli</h1>
 
 <h3 align="center">🚀 Full-Stack Web Developer | Discord Bot Creator | AI & Performance Enthusiast</h3>
 
