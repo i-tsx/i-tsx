@@ -80,27 +80,31 @@
         Menu
       </button>
       <nav class="site-nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language" title="عربي / English">
+        <span class="lang-en">EN</span>
+        <span class="lang-ar">ع</span>
+      </button>
     </header>
 
     <main>
       <section class="hero reveal" id="hero" id="top">
-        <p class="eyebrow">Open to full-time and freelance work</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Open to full-time and freelance work</p>
         <h1>
-          Hi, I am
+          <span data-i18n="hero.greeting">Hi, I am</span>
           <span class="accent" id="profile-name">Abdullah El Chebli Chadid</span
           >.<br />
-          I build scalable products and high-impact developer tools.
+          <span data-i18n="hero.headline">I build scalable products and high-impact developer tools.</span>
         </h1>
         <p class="hero-copy" id="profile-bio">
           Full Stack Developer, performance optimization, scalable backend systems, and polished frontend experiences.
         </p>
-        <p class="major-badge" aria-label="Academic major">
+        <p class="major-badge" aria-label="Academic major" data-i18n="hero.major">
           Major: Mechanical Engineering (Design and Production)
         </p>
         <div class="hero-actions">
@@ -110,6 +114,7 @@
             href="https://github.com/i-tsx"
             target="_blank"
             rel="noreferrer"
+            data-i18n="hero.github"
             >GitHub Profile</a
           >
           <a
@@ -117,22 +122,23 @@
             href="https://www.linkedin.com/in/abdullah-chebli-244240279/"
             target="_blank"
             rel="noreferrer"
+            data-i18n="hero.linkedin"
             >LinkedIn</a
           >
         </div>
         <ul class="hero-stats" aria-label="Quick profile highlights">
-          <li><strong id="stat-years">5+</strong> Years on GitHub</li>
-          <li><strong id="stat-repos">9</strong> Public repositories</li>
-          <li><strong id="stat-followers">1</strong> GitHub followers</li>
+          <li><strong id="stat-years">5+</strong> <span data-i18n="hero.yearsOnGithub">Years on GitHub</span></li>
+          <li><strong id="stat-repos">9</strong> <span data-i18n="hero.repos">Public repositories</span></li>
+          <li><strong id="stat-followers">1</strong> <span data-i18n="hero.followers">GitHub followers</span></li>
         </ul>
       </section>
 
       <section class="about reveal" id="about">
         <div>
-          <p class="section-tag">About</p>
-          <h2>Building practical, reliable systems with product focus.</h2>
+          <p class="section-tag" data-i18n="about.tag">About</p>
+          <h2 data-i18n="about.heading">Building practical, reliable systems with product focus.</h2>
         </div>
-        <p>
+        <p data-i18n="about.content">
           Full-stack web developer with 3+ years of experience, and a builder who enjoys
           performance-focused architectures.
           I am currently a second-year Mechanical Engineering student in the
@@ -141,26 +147,26 @@
       </section>
 
       <section class="skills reveal" id="skills">
-        <p class="section-tag">Skills</p>
-        <h2>Tools and technologies I rely on every day.</h2>
+        <p class="section-tag" data-i18n="skills.tag">Skills</p>
+        <h2 data-i18n="skills.heading">Tools and technologies I rely on every day.</h2>
         <div class="skill-grid">
           <article class="skill-card">
-            <h3>Frontend</h3>
-            <p>
+            <h3 data-i18n="skills.frontend.title">Frontend</h3>
+            <p data-i18n="skills.frontend.desc">
               React, Next.js, TypeScript, HTML, CSS, and responsive interface
               engineering.
             </p>
           </article>
           <article class="skill-card">
-            <h3>Backend</h3>
-            <p>
+            <h3 data-i18n="skills.backend.title">Backend</h3>
+            <p data-i18n="skills.backend.desc">
               Node.js, NestJS, SQL/NoSQL design, API architecture, and
               optimization.
             </p>
           </article>
           <article class="skill-card">
-            <h3>Workflow</h3>
-            <p>
+            <h3 data-i18n="skills.workflow.title">Workflow</h3>
+            <p data-i18n="skills.workflow.desc">
               Git, Docker, package publishing, maintainable architecture, and
               production delivery.
             </p>
@@ -170,8 +176,8 @@
 
       <section class="projects reveal" id="projects">
         <div class="section-head">
-          <p class="section-tag">Projects</p>
-          <h2>Selected work</h2>
+          <p class="section-tag" data-i18n="projects.tag">Projects</p>
+          <h2 data-i18n="projects.heading">Selected work</h2>
         </div>
         <div class="project-grid">
           <article class="project-card" data-project-card>
@@ -189,6 +195,7 @@
               href="https://www.npmjs.com/package/simplifield-sql"
               target="_blank"
               rel="noreferrer"
+              data-i18n="projects.openProject"
               >Open Project</a
             >
           </article>
@@ -208,6 +215,7 @@
               href="https://github.com/i-tsx/stavo-e-commerce"
               target="_blank"
               rel="noreferrer"
+              data-i18n="projects.openRepo"
               >Open Repository</a
             >
           </article>
@@ -227,6 +235,7 @@
               href="https://github.com/i-tsx/SystemBot"
               target="_blank"
               rel="noreferrer"
+              data-i18n="projects.openRepo"
               >Open Repository</a
             >
           </article>
@@ -234,29 +243,29 @@
       </section>
 
       <section class="experience reveal" id="experience">
-        <p class="section-tag">Milestones</p>
-        <h2>Highlights from GitHub and project work</h2>
+        <p class="section-tag" data-i18n="experience.tag">Milestones</p>
+        <h2 data-i18n="experience.heading">Highlights from GitHub and project work</h2>
         <div class="timeline">
           <article>
-            <h3>Profile Activity</h3>
-            <p class="muted">GitHub account since 2020</p>
-            <p>
+            <h3 data-i18n="experience.activity.title">Profile Activity</h3>
+            <p class="muted" data-i18n="experience.activity.subtitle">GitHub account since 2020</p>
+            <p data-i18n="experience.activity.desc">
               Consistent open-source activity across bot tooling, packages, and
               full-stack web apps.
             </p>
           </article>
           <article>
-            <h3>Competition Achievement</h3>
-            <p class="muted">UAE AI Competition</p>
-            <p>
+            <h3 data-i18n="experience.competition.title">Competition Achievement</h3>
+            <p class="muted" data-i18n="experience.competition.subtitle">UAE AI Competition</p>
+            <p data-i18n="experience.competition.desc">
               #1 winner with a strong focus on practical AI problem-solving and
               delivery.
             </p>
           </article>
           <article>
-            <h3>Discord Bot Ecosystem</h3>
-            <p class="muted">5,000+ server impact</p>
-            <p>
+            <h3 data-i18n="experience.discord.title">Discord Bot Ecosystem</h3>
+            <p class="muted" data-i18n="experience.discord.subtitle">5,000+ server impact</p>
+            <p data-i18n="experience.discord.desc">
               Built and maintained Discord bots that reached real communities at
               production scale.
             </p>
@@ -266,9 +275,9 @@
 
       <section class="contact reveal" id="contact">
         <div>
-          <p class="section-tag">Contact</p>
-          <h2>Let us build something memorable.</h2>
-          <p>
+          <p class="section-tag" data-i18n="contact.tag">Contact</p>
+          <h2 data-i18n="contact.heading">Let us build something memorable.</h2>
+          <p data-i18n="contact.desc">
             Reach out through GitHub or LinkedIn for collaborations, freelance
             work, and product ideas.
           </p>
@@ -280,12 +289,14 @@
               href="https://www.linkedin.com/in/abdullah-chebli-244240279/"
               target="_blank"
               rel="noreferrer"
+              data-i18n="contact.linkedin"
               >LinkedIn Profile</a
             >
             <a
               href="https://www.npmjs.com/package/simplifield-sql"
               target="_blank"
               rel="noreferrer"
+              data-i18n="contact.npm"
               >NPM: simplifield-sql</a
             >
           </div>
@@ -301,7 +312,7 @@
             name="_subject"
             value="New portfolio contact message"
           />
-          <label>
+          <label data-i18n="contact.form.name">
             Name
             <input
               type="text"
@@ -310,7 +321,7 @@
               required
             />
           </label>
-          <label>
+          <label data-i18n="contact.form.email">
             Email
             <input
               type="email"
@@ -319,7 +330,7 @@
               required
             />
           </label>
-          <label>
+          <label data-i18n="contact.form.message">
             Project brief
             <textarea
               name="message"
@@ -328,17 +339,16 @@
               required
             ></textarea>
           </label>
-          <button class="btn btn-primary" type="submit">Send Message</button>
+          <button class="btn btn-primary" type="submit" data-i18n="contact.form.submit">Send Message</button>
         </form>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>
-        © <span id="year"></span> Abdullah El Chebli Chadid. All rights
-        reserved.
+        © <span id="year"></span> Abdullah El Chebli Chadid. <span data-i18n="footer.rights">All rights reserved.</span>
       </p>
-      <a href="#top">Back to top</a>
+      <a href="#top" data-i18n="footer.topLink">Back to top</a>
     </footer>
 
     <script src="./script.js"></script>

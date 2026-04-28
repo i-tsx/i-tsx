@@ -400,6 +400,97 @@ textarea:focus {
   transform: none;
 }
 
+/* Language Toggle Button */
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 300ms ease;
+}
+
+.lang-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.lang-toggle .lang-en,
+.lang-toggle .lang-ar {
+  display: inline-block;
+  transition: opacity 300ms ease;
+}
+
+.lang-toggle .lang-ar {
+  opacity: 0.5;
+}
+
+.lang-toggle.ar-active .lang-en {
+  opacity: 0.5;
+}
+
+.lang-toggle.ar-active .lang-ar {
+  opacity: 1;
+}
+
+/* RTL Support */
+html[dir="rtl"] .site-header {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .orb-a {
+  right: auto;
+  left: -80px;
+}
+
+html[dir="rtl"] .orb-b {
+  left: auto;
+  right: -120px;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2 {
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-copy,
+html[dir="rtl"] .about,
+html[dir="rtl"] .contact > div > p {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact {
+  grid-template-columns: 1.1fr 1fr;
+}
+
+html[dir="rtl"] .hero-actions {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .contact-form {
+  order: -1;
+}
+
+html[dir="rtl"] .site-footer {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero-stats {
+  text-align: right;
+}
+
+html[dir="rtl"] .skill-card,
+html[dir="rtl"] .project-card,
+html[dir="rtl"] .timeline article {
+  text-align: right;
+}
+
 @media (max-width: 930px) {
   .skill-grid,
   .project-grid,
@@ -422,6 +513,12 @@ textarea:focus {
 
   .menu-toggle {
     display: inline-block;
+  }
+
+  .lang-toggle {
+    order: 1;
+    width: 100%;
+    justify-content: center;
   }
 
   .site-nav {
