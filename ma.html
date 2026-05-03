@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Road Map — مقاومة المواد ٢</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080c14;
+  --surface: #0d1320;
+  --surface2: #111827;
+  --border: #1e2d45;
+  --text: #e2eaf7;
+  --muted: #4a6080;
+  --c1: #f97316;
+  --c2: #3b82f6;
+  --c3: #10b981;
+  --c4: #a855f7;
+  --c5: #ef4444;
+  --c6: #eab308;
+  --c7: #06b6d4;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* GRAIN TEXTURE */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 50px 20px 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #f97316, #ef4444);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #e2eaf7 0%, #94b4d6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+header p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.header-line {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #f97316, transparent);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* MAIN LAYOUT */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  position: relative;
+  z-index: 1;
+}
+
+/* VERTICAL SPINE */
+.timeline {
+  position: relative;
+  padding-right: 50px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom,
+    var(--c1) 0%, var(--c2) 16%, var(--c3) 32%,
+    var(--c4) 48%, var(--c5) 64%, var(--c6) 80%, var(--c7) 100%);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+/* NODE */
+.node {
+  position: relative;
+  margin-bottom: 18px;
+  animation: fadeSlide 0.5s ease forwards;
+  opacity: 0;
+}
+.node:nth-child(1) { animation-delay: 0.05s; }
+.node:nth-child(2) { animation-delay: 0.15s; }
+.node:nth-child(3) { animation-delay: 0.25s; }
+.node:nth-child(4) { animation-delay: 0.35s; }
+.node:nth-child(5) { animation-delay: 0.45s; }
+.node:nth-child(6) { animation-delay: 0.55s; }
+.node:nth-child(7) { animation-delay: 0.65s; }
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* SPINE DOT */
+.spine-dot {
+  position: absolute;
+  right: -38px;
+  top: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #fff;
+  border: 3px solid var(--bg);
+  z-index: 2;
+  box-shadow: 0 0 16px rgba(0,0,0,0.5);
+}
+
+/* CARD */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  user-select: none;
+}
+
+.card-num {
+  font-size: 2rem;
+  font-weight: 900;
+  opacity: 0.15;
+  line-height: 1;
+  min-width: 36px;
+}
+
+.card-info { flex: 1; }
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.card-sub {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.card-pages {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.68rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.chevron {
+  color: var(--muted);
+  font-size: 0.85rem;
+  transition: transform 0.3s;
+  margin-right: 4px;
+}
+.card.open .chevron { transform: rotate(90deg); }
+
+/* CARD BODY */
+.card-body {
+  display: none;
+  padding: 0 22px 22px;
+  border-top: 1px solid var(--border);
+  flex-direction: column;
+  gap: 10px;
+}
+.card.open .card-body {
+  display: flex;
+  padding-top: 20px;
+}
+
+/* SECTION INSIDE BODY */
+.section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  margin-top: 6px;
+}
+
+/* TOPIC ROW */
+.topic {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.topic-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.topic-text {
+  font-size: 0.83rem;
+  color: #b0c0d8;
+  line-height: 1.65;
+  font-weight: 400;
+  text-rendering: geometricPrecision;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.topic-text b {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* FORMULA BOX */
+.formula {
+  display: block;
+  background: linear-gradient(135deg, #071324, #0b2038);
+  border: 1px solid #315d92;
+  border-right: 5px solid #7dd3fc;
+  color: #eaf6ff;
+  font-family: 'Tajawal', sans-serif;
+  font-size: clamp(1rem, 1.6vw, 1.08rem);
+  font-weight: 600;
+  padding: 14px 18px;
+  border-radius: 14px;
+  margin-top: 12px;
+  line-height: 1.95;
+  direction: ltr;
+  text-align: center;
+  white-space: pre-wrap;
+  unicode-bidi: plaintext;
+  overflow-x: auto;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 10px 26px rgba(0,0,0,0.22);
+  font-variant-numeric: lining-nums tabular-nums;
+  text-shadow: 0 0 10px rgba(125, 211, 252, 0.08);
+}
+
+/* TAGS */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+  font-family: 'Consolas', 'SFMono-Regular', 'Courier New', monospace;
+  direction: ltr;
+  unicode-bidi: plaintext;
+}
+.tag-blue   { background: #0c1e3a; border-color: #1e4a80; color: #60a5fa; }
+.tag-green  { background: #062018; border-color: #0e4a30; color: #34d399; }
+.tag-purple { background: #140c2e; border-color: #3b1f6a; color: #c084fc; }
+.tag-orange { background: #1a0e04; border-color: #5a2e08; color: #fb923c; }
+.tag-yellow { background: #1a1500; border-color: #5a4800; color: #fbbf24; }
+
+/* RESULT BOX */
+.result {
+  background: linear-gradient(135deg, #0a1628, #0a1e38);
+  border: 1px solid #2a568d;
+  border-right: 4px solid #93c5fd;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  color: #93c5fd;
+  font-family: 'Tajawal', sans-serif;
+  line-height: 1.8;
+}
+.result strong {
+  display: block;
+  color: #e5f2ff;
+  font-weight: 900;
+  font-size: 1.08rem;
+  font-family: 'Tajawal', sans-serif;
+  direction: ltr;
+  unicode-bidi: plaintext;
+  letter-spacing: 0.2px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* SUMMARY BAR */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+.summary-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+.summary-num {
+  font-size: 1.6rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #f97316, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.summary-label { font-size: 0.7rem; color: var(--muted); margin-top: 2px; }
+
+/* COLOR ACCENT per node */
+.n1 .card { border-right: 3px solid var(--c1); }
+.n1 .card-num { color: var(--c1); }
+.n1 .spine-dot { background: var(--c1); }
+.n1 .card:hover { border-color: var(--c1); box-shadow: 0 8px 40px rgba(249,115,22,0.15); }
+
+.n2 .card { border-right: 3px solid var(--c2); }
+.n2 .card-num { color: var(--c2); }
+.n2 .spine-dot { background: var(--c2); }
+.n2 .card:hover { border-color: var(--c2); box-shadow: 0 8px 40px rgba(59,130,246,0.15); }
+
+.n3 .card { border-right: 3px solid var(--c3); }
+.n3 .card-num { color: var(--c3); }
+.n3 .spine-dot { background: var(--c3); }
+.n3 .card:hover { border-color: var(--c3); box-shadow: 0 8px 40px rgba(16,185,129,0.15); }
+
+.n4 .card { border-right: 3px solid var(--c4); }
+.n4 .card-num { color: var(--c4); }
+.n4 .spine-dot { background: var(--c4); }
+.n4 .card:hover { border-color: var(--c4); box-shadow: 0 8px 40px rgba(168,85,247,0.15); }
+
+.n5 .card { border-right: 3px solid var(--c5); }
+.n5 .card-num { color: var(--c5); }
+.n5 .spine-dot { background: var(--c5); }
+.n5 .card:hover { border-color: var(--c5); box-shadow: 0 8px 40px rgba(239,68,68,0.15); }
+
+.n6 .card { border-right: 3px solid var(--c6); }
+.n6 .card-num { color: var(--c6); }
+.n6 .spine-dot { background: var(--c6); }
+.n6 .card:hover { border-color: var(--c6); box-shadow: 0 8px 40px rgba(234,179,8,0.15); }
+
+.n7 .card { border-right: 3px solid var(--c7); }
+.n7 .card-num { color: var(--c7); }
+.n7 .spine-dot { background: var(--c7); }
+.n7 .card:hover { border-color: var(--c7); box-shadow: 0 8px 40px rgba(6,182,212,0.15); }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+/* HINT */
+.hint {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.hint::before, .hint::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  max-width: 120px;
+}
+
+/* DIVIDER */
+.div-line {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin: 6px 0 10px;
+  opacity: 0.5;
+}
+
+/* TABLE */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+.info-table th {
+  background: #0a1220;
+  color: #7dd3fc;
+  padding: 7px 12px;
+  text-align: right;
+  font-weight: 700;
+  border: 1px solid var(--border);
+}
+.info-table td {
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  color: #b0c0d8;
+  background: var(--surface2);
+}
+.info-table tr:nth-child(even) td { background: #0d1828; }
+.info-table th:not(:first-child),
+.info-table td:not(:first-child) {
+  direction: ltr;
+  unicode-bidi: plaintext;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+  color: #e7f4ff;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+</style>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']]
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  },
+  chtml: {
+    matchFontHeight: false
+  }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="header-badge">Mechanics of Materials II</div>
+  <h1>🗺️ خريطة مقاومة المواد ٢</h1>
+  <p>Abdullah — Mechanical Engineer &nbsp;|&nbsp; ملخص نظري وعملي كامل</p>
+  <div class="header-line"></div>
+</header>
+
+<div class="container">
+
+  <!-- SUMMARY STATS -->
+  <div class="summary">
+    <div class="summary-item">
+      <div class="summary-num">٧</div>
+      <div class="summary-label">محاور رئيسية</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-num">٥٢</div>
+      <div class="summary-label">صفحة</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-num">٣</div>
+      <div class="summary-label">طرق حل</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-num">١٥+</div>
+      <div class="summary-label">مثال محلول</div>
+    </div>
+  </div>
+
+  <div class="hint">اضغط على أي بطاقة لعرض التفاصيل</div>
+
+  <div class="timeline">
+
+    <!-- NODE 1 -->
+    <div class="node n1">
+      <div class="spine-dot">١</div>
+      <div class="card" onclick="toggle(this)">
+        <div class="card-header">
+          <div class="card-num">01</div>
+          <div class="card-info">
+            <div class="card-title">الانضغاط والإجهادات الناتجة عن الانعطاف</div>
+            <div class="card-sub">Bending Stress — Fundamentals</div>
+          </div>
+          <span class="card-pages">ص ١ – ٣</span>
+          <span class="chevron">▶</span>
+        </div>
+        <div class="card-body">
+
+          <div class="section-title">المفاهيم الأساسية</div>
+
+          <div class="topic">
+            <span class="topic-icon">🔸</span>
+            <div class="topic-text">
+              <b>سلوك الألياف عند الانعطاف:</b><br>
+              الألياف العلوية تتعرض للانضغاط ← الألياف السفلية تتعرض للشد<br>
+              <div class="tags">
+                <span class="tag tag-blue">ألياف علوية → انضغاط</span>
+                <span class="tag tag-green">ألياف سفلية → شد</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="topic">
+            <span class="topic-icon">⚖️</span>
+            <div class="topic-text">
+              <b>المحور المحايد (Neutral Axis):</b><br>
+              المستوى الذي لا يتشوه — يبقى بنفس طوله قبل وبعد التشوه. الألياف المتعامدة معه لا تتشوه ولا تنحني.
+            </div>
+          </div>
+
+          <div class="div-line"></div>
+          <div class="section-title">الاشتقاق الرياضي</div>
+
+          <div class="topic">
+            <span class="topic-icon">📐</span>
+            <div class="topic-text">
+              <b>الانفعال النسبي ε:</b>
+              <span class="formula">\[
+\begin{aligned}
+\Delta dz &= (\rho + y)\, d\theta - \rho\, d\theta \\
+\varepsilon &= \frac{\Delta dz}{dz} = \frac{y}{\rho} \\
+	ext{حيث: } y &= \text{البعد عن المحور المحايد} \\
+\rho &= \text{نصف قطر التقوس}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="topic">
+            <span class="topic-icon">⚡</span>
+            <div class="topic-text">
+              <b>قانون هوك → الإجهاد الطبيعي σ:</b>
+              <span class="formula">\[\sigma = E\,\varepsilon = \frac{E y}{\rho}\]</span>
+              الإجهادات تتوزع خطياً — صفر عند المحايد، أقصاها عند الأطراف
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 2 -->
+    <div class="node n2">
+      <div class="spine-dot">٢</div>
+      <div class="card" onclick="toggle(this)">
+        <div class="card-header">
+          <div class="card-num">02</div>
+          <div class="card-info">
+            <div class="card-title">معادلة الانعطاف وعزم المقاومة</div>
+            <div class="card-sub">Flexure Formula & Section Modulus</div>
+          </div>
+          <span class="card-pages">ص ٣ – ٦</span>
+          <span class="chevron">▶</span>
+        </div>
+        <div class="card-body">
+
+          <div class="section-title">اشتقاق المعادلة</div>
+
+          <div class="topic">
+            <span class="topic-icon">🔄</span>
+            <div class="topic-text">
+              <b>شرط التوازن الأول \(N_z = 0\):</b>
+              <span class="formula">\[
+\begin{aligned}
+N_z &= \int \sigma_z\, dA = \frac{E}{\rho}\int y\, dA = 0 \\
+\Rightarrow \int y\, dA &= 0 \Rightarrow \text{المحور المحايد يمر بمركز ثقل المقطع}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="topic">
+            <span class="topic-icon">🌀</span>
+            <div class="topic-text">
+              <b>شرط التوازن الثاني (عزم الانعطاف M_z):</b>
+              <span class="formula">\[
+\begin{aligned}
+M_z &= \int \sigma_z\, y\, dA = \frac{E}{\rho}\int y^2\, dA = \frac{E}{\rho} I_x \\
+\Rightarrow \frac{1}{\rho} &= \frac{M_z}{E I_x}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="div-line"></div>
+          <div class="section-title">⭐ المعادلة الأساسية</div>
+
+          <div class="result">
+            <strong>\(\sigma = \dfrac{My}{I}\)</strong><br><br>
+            M = عزم الانعطاف &nbsp;|&nbsp; y = البعد عن المحايد &nbsp;|&nbsp; I = عزم العطالة
+          </div>
+
+          <div class="section-title">الإجهادات القصوى وعزم المقاومة</div>
+
+          <div class="topic">
+            <span class="topic-icon">📊</span>
+            <div class="topic-text">
+              <b>الإجهادات القصوى للمقاطع غير المتماثلة:</b>
+              <span class="formula">\[
+\begin{aligned}
+\sigma_{\max}(+) &= \frac{M h_1}{I} \quad \text{← الليف الأبعد (شد)} \\
+\sigma_{\min}(-) &= \frac{M h_2}{I} \quad \text{← الليف الأقرب (ضغط)}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="topic">
+            <span class="topic-icon">🔑</span>
+            <div class="topic-text">
+              <b>عزم المقاومة W (للمقاطع المتماثلة):</b>
+              <span class="formula">\[
+\begin{aligned}
+W &= \frac{I}{y_{\max}} = \frac{2I}{h} \\
+	ext{للمستطيل: } W &= \frac{bh^2}{6} \\
+\Rightarrow \sigma_{\max} &= \frac{M}{W}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="section-title">مثال: مقطع مستطيل h=33cm, b=16.5cm</div>
+          <div class="topic">
+            <span class="topic-icon">📌</span>
+            <div class="topic-text">
+              عند M = 3 t·m = 3×10⁵ kg.cm:
+              <span class="formula">\[
+\begin{aligned}
+I &= \frac{bh^3}{12} = \frac{16.5\times 33^3}{12} = \dots \\
+y &= \frac{h}{2} \Rightarrow \sigma = \pm 100.2\ \text{kg/cm}^2 \\
+y &= \frac{h}{4} \Rightarrow \sigma = \pm 50\ \text{kg/cm}^2
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 3 -->
+    <div class="node n3">
+      <div class="spine-dot">٣</div>
+      <div class="card" onclick="toggle(this)">
+        <div class="card-header">
+          <div class="card-num">03</div>
+          <div class="card-info">
+            <div class="card-title">إجهادات القص في المقاطع العرضية</div>
+            <div class="card-sub">Shear Stress Distribution</div>
+          </div>
+          <span class="card-pages">ص ٦ – ٩</span>
+          <span class="chevron">▶</span>
+        </div>
+        <div class="card-body">
+
+          <div class="section-title">اشتقاق معادلة القص</div>
+
+          <div class="topic">
+            <span class="topic-icon">⚙️</span>
+            <div class="topic-text">
+              من شرط التوازن ΣFx=0 على عنصر abcd:
+              <span class="formula">\[
+\begin{aligned}
+N - N_1 + \tau\, b\, dx &= 0 \\
+\Rightarrow \tau\, b\, dx &= \frac{S}{I}(M_1 - M) = \frac{S}{I}\, dM
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="result">
+            <strong>\(\tau = \dfrac{Q S}{b I}\)</strong><br><br>
+            Q = قوة القص &nbsp;|&nbsp; S = العزم الاستاتيكي &nbsp;|&nbsp;
+            b = عرض المقطع عند y &nbsp;|&nbsp; I = عزم عطالة
+          </div>
+
+          <div class="div-line"></div>
+          <div class="section-title">توزيع القص على المقاطع الشائعة</div>
+
+          <table class="info-table">
+            <tr><th>المقطع</th><th>τ_max</th><th>الموقع</th></tr>
+            <tr><td>مستطيل</td><td>\(\dfrac{3Q}{2A}\)</td><td>عند \(y = 0\) (المحايد)</td></tr>
+            <tr><td>دائرة</td><td>\(\dfrac{4Q}{3A}\)</td><td>عند \(y = 0\)</td></tr>
+            <tr><td>مقطع I</td><td>\(\dfrac{Q S_{\max}}{I b}\)</td><td>عند المحايد (الوسط)</td></tr>
+          </table>
+
+          <div class="section-title">مثال: مقطع مستطيل 10×24 cm</div>
+          <div class="topic">
+            <span class="topic-icon">📌</span>
+            <div class="topic-text">
+              <span class="formula">\[
+\begin{aligned}
+S &= \left(b \times \frac{h}{2}\right)\times \frac{h}{4} = 10\times 9 \times 7.5 = 675\ \text{cm}^3 \\
+b &= 10\ \text{cm} \\
+	au &= \frac{Q\cdot 675}{I\cdot 10}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 4 -->
+    <div class="node n4">
+      <div class="spine-dot">٤</div>
+      <div class="card" onclick="toggle(this)">
+        <div class="card-header">
+          <div class="card-num">04</div>
+          <div class="card-info">
+            <div class="card-title">خط المرن — طريقة التكامل المباشر</div>
+            <div class="card-sub">Elastic Curve — Direct Integration</div>
+          </div>
+          <span class="card-pages">ص ١٠ – ١٦</span>
+          <span class="chevron">▶</span>
+        </div>
+        <div class="card-body">
+
+          <div class="section-title">المعادلة التفاضلية لخط المرن</div>
+
+          <div class="topic">
+            <span class="topic-icon">📐</span>
+            <div class="topic-text">
+              المعادلة الدقيقة للتقوس:
+              <span class="formula">\[\frac{1}{\rho} = \pm \frac{\dfrac{d^2 y}{dx^2}}{\left[1 + \left(\dfrac{dy}{dx}\right)^2\right]^{3/2}}\]</span>
+              عند الانعطاف الصغير (dy/dx ≪ 1):
+              <span class="formula">\[EI\,y'' = M_x \quad \text{← معادلة خط الانعطاف الخطية}\]</span>
+            </div>
+          </div>
+
+          <div class="div-line"></div>
+          <div class="section-title">خطوات الحل</div>
+
+          <div class="topic">
+            <span class="topic-icon">1️⃣</span>
+            <div class="topic-text"><b>إيجاد ردود الأفعال</b> \((\Sigma F = 0,\ \Sigma M = 0)\)</div>
+          </div>
+          <div class="topic">
+            <span class="topic-icon">2️⃣</span>
+            <div class="topic-text"><b>كتابة M_x</b> كدالة في x (مع مراعاة إشارة العزم)</div>
+          </div>
+          <div class="topic">
+            <span class="topic-icon">3️⃣</span>
+            <div class="topic-text">
+              <b>تكامل أول:</b>
+              <span class="formula">\[EI\,\phi = EI\,y' = \int M\,dx + C\]</span>
+            </div>
+          </div>
+          <div class="topic">
+            <span class="topic-icon">4️⃣</span>
+            <div class="topic-text">
+              <b>تكامل ثانٍ:</b>
+              <span class="formula">\[EI\,y = \iint M\,dx + Cx + D\]</span>
+            </div>
+          </div>
+          <div class="topic">
+            <span class="topic-icon">5️⃣</span>
+            <div class="topic-text">
+              <b>تطبيق شروط الحدود</b> لإيجاد C و D:
+              <div class="tags">
+                <span class="tag tag-blue">تعشيق: y=0, φ=0</span>
+                <span class="tag tag-green">مفصل: y=0</span>
+                <span class="tag tag-orange">حر: M=0, Q=0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-line"></div>
+          <div class="section-title">نتائج مهمة</div>
+
+          <table class="info-table">
+            <tr><th>الحالة</th><th>φ_max</th><th>y_max</th></tr>
+            <tr><td>كابولة + حمل مركز P عند الطرف</td><td>\(\dfrac{PL^2}{2EI}\)</td><td>\(\dfrac{PL^3}{3EI}\)</td></tr>
+            <tr><td>عارضة بسيطة + عزم M عند الطرف</td><td>\(\dfrac{ML}{3EI}\)</td><td>\(\dfrac{ML^2}{\sqrt{3}\,EI}\)</td></tr>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 5 -->
+    <div class="node n5">
+      <div class="spine-dot">٥</div>
+      <div class="card" onclick="toggle(this)">
+        <div class="card-header">
+          <div class="card-num">05</div>
+          <div class="card-info">
+            <div class="card-title">طريقة Macaulay — الدوال الأحادية</div>
+            <div class="card-sub">Macaulay's Method — Singularity Functions</div>
+          </div>
+          <span class="card-pages">ص ١٧ – ٣٠</span>
+          <span class="chevron">▶</span>
+        </div>
+        <div class="card-body">
+
+          <div class="section-title">الفكرة الجوهرية</div>
+          <div class="topic">
+            <span class="topic-icon">💡</span>
+            <div class="topic-text">
+              بدلاً من كتابة معادلة لكل قسم، نكتب <b>معادلة واحدة</b> تمثل كل العارضة باستخدام الدوال الأحادية ⟨x−a⟩ التي تساوي صفراً حين تكون سالبة.
+            </div>
+          </div>
+
+          <div class="section-title">⭐ المعادلات العامة (الحفظ إجباري)</div>
+
+          <div class="topic">
+            <span class="topic-icon">📋</span>
+            <div class="topic-text">
+              <b>معادلة الزاوية φ:</b>
+              <span class="formula">\[
+\begin{aligned}
+EI\,\phi &= EI\,\phi_0 + \sum M(x-a) \\
+&\quad + \sum \frac{P(x-b)^2}{2} \\
+&\quad - \sum \frac{q(x-c)^3}{6} \\
+&\quad + \sum \frac{q(x-d)^3}{6} \quad \text{(إيقاف الحمل)}
+\end{aligned}
+\]</span>
+              <b>معادلة الإنحناء y:</b>
+              <span class="formula">\[
+\begin{aligned}
+EI\,y &= EI\,y_0 + EI\,\phi_0\,x \\
+&\quad + \sum \frac{M(x-a)^2}{2} \\
+&\quad + \sum \frac{P(x-b)^3}{6} \\
+&\quad - \sum \frac{q(x-c)^4}{24} \\
+&\quad + \sum \frac{q(x-d)^4}{24}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="section-title">قواعد التكامل</div>
+          <table class="info-table">
+            <tr><th>نوع الحمل</th><th>الإسهام في φ</th><th>الإسهام في y</th></tr>
+            <tr><td>عزم M عند a</td><td>M(x−a)</td><td>M(x−a)²/2</td></tr>
+            <tr><td>قوة P عند b</td><td>P(x−b)²/2</td><td>P(x−b)³/6</td></tr>
+            <tr><td>حمل موزع q (ابتداء c)</td><td>−q(x−c)³/6</td><td>−q(x−c)⁴/24</td></tr>
+            <tr><td>إيقاف الحمل عند d</td><td>+q(x−d)³/6</td><td>+q(x−d)⁴/24</td></tr>
+          </table>
+
+          <div class="section-title">نتائج مهمة</div>
+          <table class="info-table">
+            <tr><th>الحالة</th><th>y_max</th></tr>
+            <tr><td>عارضة بسيطة + q موزع كامل</td><td>\(\dfrac{5qL^4}{384EI}\)</td></tr>
+            <tr><td>عارضة بسيطة + حمل P في الوسط</td><td>\(\dfrac{PL^3}{48EI}\)</td></tr>
+            <tr><td>كابولة + حمل موزع</td><td>\(\dfrac{qL^4}{8EI}\)</td></tr>
+            <tr><td>كابولة + حمل مركز</td><td>\(\dfrac{PL^3}{3EI}\)</td></tr>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 6 -->
+    <div class="node n6">
+      <div class="spine-dot">٦</div>
+      <div class="card" onclick="toggle(this)">
+        <div class="card-header">
+          <div class="card-num">06</div>
+          <div class="card-info">
+            <div class="card-title">طريقة المساحات — Moment Area</div>
+            <div class="card-sub">Mohr's Moment-Area Method</div>
+          </div>
+          <span class="card-pages">ص ٣١ – ٣٦</span>
+          <span class="chevron">▶</span>
+        </div>
+        <div class="card-body">
+
+          <div class="section-title">الفكرة الأساسية</div>
+          <div class="topic">
+            <span class="topic-icon">💡</span>
+            <div class="topic-text">
+              استخدام <b>مساحة مخطط M/EI</b> مباشرةً لحساب الإنحناء والزاوية — مفيدة جداً حين يكون مخطط M بسيطاً (مثلث، مستطيل).
+            </div>
+          </div>
+
+          <div class="section-title">القانونان الأساسيان</div>
+
+          <div class="topic">
+            <span class="topic-icon">📜</span>
+            <div class="topic-text">
+              <b>القانون الأول — فرق الزاوية:</b>
+              <span class="formula">\[
+\begin{aligned}
+\phi_B - \phi_A &= \int_{A}^{B} \frac{M}{EI}\, dx \\
+&= \text{مساحة مخطط } M/EI \text{ بين A و B}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="topic">
+            <span class="topic-icon">📜</span>
+            <div class="topic-text">
+              <b>القانون الثاني — الإنحناء:</b>
+              <span class="formula">\[
+\begin{aligned}
+y &= \frac{1}{EI}\sum (\omega\, y_{ce}) \\
+\omega &= \text{مساحة جزء مخطط } M/EI \\
+y_{ce} &= \text{بُعد مركز ثقله عن النقطة المطلوبة}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="div-line"></div>
+          <div class="section-title">مراكز ثقل الأشكال الشائعة</div>
+          <table class="info-table">
+            <tr><th>الشكل</th><th>المساحة</th><th>مركز الثقل</th></tr>
+            <tr><td>مستطيل</td><td>\(bh\)</td><td>\(b/2\)</td></tr>
+            <tr><td>مثلث</td><td>\(\frac{1}{2}bh\)</td><td>\(b/3\) (من القاعدة)</td></tr>
+            <tr><td>قطع مكافئ</td><td>\(\frac{1}{3}bh\)</td><td>\(3b/4\) (من الرأس)</td></tr>
+            <tr><td>½ القطع المكافئ</td><td>\(\frac{2}{3}bh\)</td><td>\(3b/8\) (من القاعدة)</td></tr>
+          </table>
+
+          <div class="section-title">مثال — كابولة بحمل موزع q</div>
+          <div class="topic">
+            <span class="topic-icon">📌</span>
+            <div class="topic-text">
+              <span class="formula">\[
+\begin{aligned}
+\omega &= \frac{1}{2}L\left(\frac{qL^2}{2}\right)=\frac{qL^3}{4} \\
+y_{ce} &= \frac{L}{3}\ (\text{قطع مكافئ}) \\
+y_B &= \frac{1}{EI}\left(\frac{qL^3}{4}\right)\left(\frac{3L}{4}\right)=\frac{qL^4}{8EI}\ \checkmark
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 7 -->
+    <div class="node n7">
+      <div class="spine-dot">٧</div>
+      <div class="card" onclick="toggle(this)">
+        <div class="card-header">
+          <div class="card-num">07</div>
+          <div class="card-info">
+            <div class="card-title">أمثلة مجمّعة وامتحانات</div>
+            <div class="card-sub">Combined Examples & Exam Problems</div>
+          </div>
+          <span class="card-pages">ص ٣٧ – ٥٢</span>
+          <span class="chevron">▶</span>
+        </div>
+        <div class="card-body">
+
+          <div class="section-title">أبرز الأمثلة المحلولة</div>
+
+          <div class="topic">
+            <span class="topic-icon">📝</span>
+            <div class="topic-text">
+              <b>مثال امتحان — عارضة مثبتة بحمل موزع q:</b>
+              <span class="formula">\[
+\begin{aligned}
+R_A &= qL, \qquad M_A = \frac{qL^2}{2} \\
+\Rightarrow\ \phi_B &= \frac{qL^3}{6EI} \\
+\Rightarrow\ y_B &= \frac{qL^4}{8EI}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="topic">
+            <span class="topic-icon">📝</span>
+            <div class="topic-text">
+              <b>مثال — عارضة بسيطة + حمل موزع جزئي + حمل مركز:</b>
+              <span class="formula">\[
+\begin{aligned}
+q &= 0.7\ \text{t/m}\ (\text{من } 0 \text{ إلى } L/2), \quad P = 12\ \text{t عند } x=L/2 \\
+\Rightarrow\ &\text{يحل بطريقة Macaulay معادلة واحدة} \\
+\Rightarrow\ y_c &= \frac{-5.75}{EI}, \quad \phi_D = \frac{-2.33}{EI}
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="topic">
+            <span class="topic-icon">📝</span>
+            <div class="topic-text">
+              <b>مثال إجهادات — تحديد φ و y في نقطة C بطريقة المساحات:</b>
+              <span class="formula">\[
+\begin{aligned}
+	ext{بناء مخطط } M/EI &\rightarrow \text{تقسيمه لأشكال بسيطة} \\
+\Rightarrow\ y &= \frac{1}{EI}\sum (\omega\, y_{ce})
+\end{aligned}
+\]</span>
+            </div>
+          </div>
+
+          <div class="div-line"></div>
+          <div class="section-title">ملخص خطوات الحل الموحّدة ✅</div>
+
+          <div class="topic">
+            <span class="topic-icon">✅</span>
+            <div class="topic-text">
+              <div class="tags">
+                <span class="tag tag-orange">١. ردود الأفعال</span>
+                <span class="tag tag-blue">٢. مخطط القوى القاصة Q</span>
+                <span class="tag tag-green">٣. مخطط العزوم M</span>
+                <span class="tag tag-purple">٤. معادلة EIφ و EIy</span>
+                <span class="tag tag-yellow">٥. شروط الحدود</span>
+                <span class="tag tag-blue">٦. حساب y و φ عند النقاط</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end timeline -->
+
+</div><!-- end container -->
+
+<footer>
+  📚 مقاومة المواد ٢ — Abdullah Mechanical Engineer &nbsp;|&nbsp; ٧ محاور · ٥٢+ صفحة · ٣ طرق حل
+</footer>
+
+<script>
+function toggle(card) {
+  card.classList.toggle('open');
+  if (window.MathJax && window.MathJax.typesetPromise) {
+    MathJax.typesetPromise([card]);
+  }
+}
+
+window.addEventListener('load', function () {
+  if (window.MathJax && window.MathJax.typesetPromise) {
+    MathJax.typesetPromise();
+  }
+});
+</script>
+</body>
+</html>
