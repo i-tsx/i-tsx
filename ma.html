@@ -574,10 +574,10 @@ window.MathJax = {
 \begin{aligned}
 \Delta dz &= (\rho + y)\, d\theta - \rho\, d\theta \\
 \varepsilon &= \frac{\Delta dz}{dz} = \frac{y}{\rho} \\
-	ext{حيث: } y &= \text{البعد عن المحور المحايد} \\
-\rho &= \text{نصف قطر التقوس}
+\rho &= \text{radius of curvature}
 \end{aligned}
 \]</span>
+              <div class="note">حيث: y هو البعد عن المحور المحايد، و \(\rho\) هو نصف قطر التقوس.</div>
             </div>
           </div>
 
@@ -618,7 +618,7 @@ window.MathJax = {
               <span class="formula">\[
 \begin{aligned}
 N_z &= \int \sigma_z\, dA = \frac{E}{\rho}\int y\, dA = 0 \\
-\Rightarrow \int y\, dA &= 0 \Rightarrow \text{المحور المحايد يمر بمركز ثقل المقطع}
+\Rightarrow \int y\, dA &= 0 \Rightarrow \text{the neutral axis passes through the centroid}
 \end{aligned}
 \]</span>
             </div>
@@ -653,8 +653,8 @@ M_z &= \int \sigma_z\, y\, dA = \frac{E}{\rho}\int y^2\, dA = \frac{E}{\rho} I_x
               <b>الإجهادات القصوى للمقاطع غير المتماثلة:</b>
               <span class="formula">\[
 \begin{aligned}
-\sigma_{\max}(+) &= \frac{M h_1}{I} \quad \text{← الليف الأبعد (شد)} \\
-\sigma_{\min}(-) &= \frac{M h_2}{I} \quad \text{← الليف الأقرب (ضغط)}
+\sigma_{\max}(+) &= \frac{M h_1}{I} \quad \text{top fiber (tension)} \\
+\sigma_{\min}(-) &= \frac{M h_2}{I} \quad \text{bottom fiber (compression)}
 \end{aligned}
 \]</span>
             </div>
@@ -666,11 +666,11 @@ M_z &= \int \sigma_z\, y\, dA = \frac{E}{\rho}\int y^2\, dA = \frac{E}{\rho} I_x
               <b>عزم المقاومة W (للمقاطع المتماثلة):</b>
               <span class="formula">\[
 \begin{aligned}
-W &= \frac{I}{y_{\max}} = \frac{2I}{h} \\
-	ext{للمستطيل: } W &= \frac{bh^2}{6} \\
-\Rightarrow \sigma_{\max} &= \frac{M}{W}
+W &= \frac{I}{y_{max}} = \frac{2I}{h} \\
+\Rightarrow \sigma_{max} &= \frac{M}{W}
 \end{aligned}
 \]</span>
+              <div class="note">للمستطيل: \(W = \frac{bh^2}{6}\).</div>
             </div>
           </div>
 
@@ -780,7 +780,7 @@ b &= 10\ \text{cm} \\
               المعادلة الدقيقة للتقوس:
               <span class="formula">\[\frac{1}{\rho} = \pm \frac{\dfrac{d^2 y}{dx^2}}{\left[1 + \left(\dfrac{dy}{dx}\right)^2\right]^{3/2}}\]</span>
               عند الانعطاف الصغير (dy/dx ≪ 1):
-              <span class="formula">\[EI\,y'' = M_x \quad \text{← معادلة خط الانعطاف الخطية}\]</span>
+              <span class="formula">\[EI\,y'' = M_x \quad \text{linear flexure equation}\]</span>
             </div>
           </div>
 
@@ -868,7 +868,7 @@ b &= 10\ \text{cm} \\
 EI\,\phi &= EI\,\phi_0 + \sum M(x-a) \\
 &\quad + \sum \frac{P(x-b)^2}{2} \\
 &\quad - \sum \frac{q(x-c)^3}{6} \\
-&\quad + \sum \frac{q(x-d)^3}{6} \quad \text{(إيقاف الحمل)}
+&\quad + \sum \frac{q(x-d)^3}{6} \quad \text{(load stop)}
 \end{aligned}
 \]</span>
               <b>معادلة الإنحناء y:</b>
@@ -938,7 +938,7 @@ EI\,y &= EI\,y_0 + EI\,\phi_0\,x \\
               <span class="formula">\[
 \begin{aligned}
 \phi_B - \phi_A &= \int_{A}^{B} \frac{M}{EI}\, dx \\
-&= \text{مساحة مخطط } M/EI \text{ بين A و B}
+&= \text{area of the } M/EI \text{ diagram between A and B}
 \end{aligned}
 \]</span>
             </div>
@@ -951,8 +951,8 @@ EI\,y &= EI\,y_0 + EI\,\phi_0\,x \\
               <span class="formula">\[
 \begin{aligned}
 y &= \frac{1}{EI}\sum (\omega\, y_{ce}) \\
-\omega &= \text{مساحة جزء مخطط } M/EI \\
-y_{ce} &= \text{بُعد مركز ثقله عن النقطة المطلوبة}
+\omega &= \text{area of an } M/EI \text{ segment} \\
+y_{ce} &= \text{distance from the centroid to the target point}
 \end{aligned}
 \]</span>
             </div>
@@ -975,7 +975,7 @@ y_{ce} &= \text{بُعد مركز ثقله عن النقطة المطلوبة}
               <span class="formula">\[
 \begin{aligned}
 \omega &= \frac{1}{2}L\left(\frac{qL^2}{2}\right)=\frac{qL^3}{4} \\
-y_{ce} &= \frac{L}{3}\ (\text{قطع مكافئ}) \\
+y_{ce} &= \frac{L}{3}\ (\text{parabola}) \\
 y_B &= \frac{1}{EI}\left(\frac{qL^3}{4}\right)\left(\frac{3L}{4}\right)=\frac{qL^4}{8EI}\ \checkmark
 \end{aligned}
 \]</span>
@@ -1023,8 +1023,8 @@ R_A &= qL, \qquad M_A = \frac{qL^2}{2} \\
               <b>مثال — عارضة بسيطة + حمل موزع جزئي + حمل مركز:</b>
               <span class="formula">\[
 \begin{aligned}
-q &= 0.7\ \text{t/m}\ (\text{من } 0 \text{ إلى } L/2), \quad P = 12\ \text{t عند } x=L/2 \\
-\Rightarrow\ &\text{يحل بطريقة Macaulay معادلة واحدة} \\
+q &= 0.7\ \text{t/m}\ (\text{from } 0 \text{ to } L/2), \quad P = 12\ \text{t at } x=L/2 \\
+\Rightarrow\ &\text{solve one equation using the Macaulay method} \\
 \Rightarrow\ y_c &= \frac{-5.75}{EI}, \quad \phi_D = \frac{-2.33}{EI}
 \end{aligned}
 \]</span>
@@ -1037,10 +1037,10 @@ q &= 0.7\ \text{t/m}\ (\text{من } 0 \text{ إلى } L/2), \quad P = 12\ \text{
               <b>مثال إجهادات — تحديد φ و y في نقطة C بطريقة المساحات:</b>
               <span class="formula">\[
 \begin{aligned}
-	ext{بناء مخطط } M/EI &\rightarrow \text{تقسيمه لأشكال بسيطة} \\
 \Rightarrow\ y &= \frac{1}{EI}\sum (\omega\, y_{ce})
 \end{aligned}
 \]</span>
+              <div class="note">ابنِ مخطط \(M/EI\) ثم قسّمه إلى أشكال بسيطة قبل حساب المساحات ومراكز الثقل.</div>
             </div>
           </div>
 
