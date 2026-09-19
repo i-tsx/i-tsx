@@ -42,9 +42,18 @@ function initContactForm() {
       return;
     }
 
-    const subject = encodeURIComponent(`Portfolio enquiry from ${nameInput.value.trim()}`);
-    const body = encodeURIComponent(`Name: ${nameInput.value.trim()}\nEmail: ${emailInput.value.trim()}\n\nProject details:\n${messageInput.value.trim()}`);
-    window.location.href = `mailto:abdullah.elchebli@gmail.com?subject=${subject}&body=${body}`;
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+    const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nProject details:\n${message}`);
+    const mailtoLink = `mailto:abdullah.elchebli@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+    form.reset();
+    fields.forEach((field) => {
+      field.style.borderColor = 'var(--border)';
+    });
   });
 }
 
