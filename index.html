@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr" data-theme="dark" data-lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,13 +14,17 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%A0%3C/text%3E%3C/svg%3E" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%A0%3C/text%3E%3C/svg%3E"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/sections.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="icon" type="image/png" href="assets/images/circle-picture.png" />
   </head>
   <body>
     <div class="page-shell">
@@ -39,17 +43,46 @@
           </nav>
 
           <div class="nav-actions">
-            <div class="lang-switch" aria-label="Language switcher" role="group">
-              <button class="lang-btn is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
-              <button class="lang-btn" type="button" data-lang="ar" aria-pressed="false">AR</button>
+            <div
+              class="lang-switch"
+              aria-label="Language switcher"
+              role="group"
+            >
+              <button
+                class="lang-btn is-active"
+                type="button"
+                data-lang="en"
+                aria-pressed="true"
+              >
+                EN
+              </button>
+              <button
+                class="lang-btn"
+                type="button"
+                data-lang="ar"
+                aria-pressed="false"
+              >
+                AR
+              </button>
             </div>
-            <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle dark mode"
+            >
               <span class="theme-icon" aria-hidden="true">☼</span>
             </button>
-            <a class="button button-small" href="#work" data-i18n="ctaViewWork">View work</a>
+            <a class="button button-small" href="#work" data-i18n="ctaViewWork"
+              >View work</a
+            >
           </div>
 
-          <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -63,17 +96,29 @@
             <div class="hero-copy reveal">
               <div class="eyebrow-row">
                 <span class="status-dot" aria-label="Available for work"></span>
-                <span data-i18n="heroStatus">Available for selected projects</span>
+                <span data-i18n="heroStatus"
+                  >Available for selected projects</span
+                >
               </div>
-              <h1 data-i18n="heroTitle">Building digital products<br />with an engineer’s mindset.</h1>
+              <h1 data-i18n="heroTitle">
+                Building digital products<br />with an engineer’s mindset.
+              </h1>
               <p class="lead" data-i18n="heroLead">
-                I’m Abdullah, a full-stack developer and mechanical design & production engineering student. I build
-                web applications, developer tools, and experimental hardware projects that sit at the intersection of
-                software and physical systems.
+                I’m Abdullah, a full-stack developer and mechanical design &
+                production engineering student. I build web applications,
+                developer tools, and experimental hardware projects that sit at
+                the intersection of software and physical systems.
               </p>
               <div class="cta-row">
-                <a class="button" href="#work" data-i18n="ctaViewWorkLong">View my work</a>
-                <a class="button button-secondary" href="#contact" data-i18n="ctaContactMe">Contact me</a>
+                <a class="button" href="#work" data-i18n="ctaViewWorkLong"
+                  >View my work</a
+                >
+                <a
+                  class="button button-secondary"
+                  href="#contact"
+                  data-i18n="ctaContactMe"
+                  >Contact me</a
+                >
               </div>
               <div class="meta-row">
                 <span data-i18n="heroLocation">Based in the UAE</span>
@@ -82,13 +127,23 @@
               </div>
             </div>
 
-            <div class="hero-visual reveal" aria-label="Portrait of Abdullah El Chebli">
+            <div
+              class="hero-visual reveal"
+              aria-label="Portrait of Abdullah El Chebli"
+            >
               <div class="hero-photo-card">
-                <div class="photo-badge" data-i18n="photoBadge">Software × Engineering</div>
-                <img src="assets/images/picture.png" alt="Portrait of Abdullah El Chebli" />
+                <div class="photo-badge" data-i18n="photoBadge">
+                  Software × Engineering
+                </div>
+                <img
+                  src="assets/images/picture.png"
+                  alt="Portrait of Abdullah El Chebli"
+                />
                 <div class="photo-meta">
                   <span data-i18n="photoRole">Full Stack Developer</span>
-                  <span data-i18n="photoStudy">Mechanical Engineering Student</span>
+                  <span data-i18n="photoStudy"
+                    >Mechanical Engineering Student</span
+                  >
                 </div>
               </div>
             </div>
@@ -98,8 +153,12 @@
         <section class="section-pad" id="work">
           <div class="container">
             <div class="section-heading reveal">
-              <p class="section-kicker" data-i18n="sectionWorkKicker">Selected work</p>
-              <h2 data-i18n="sectionWorkTitle">Products, platforms, and prototypes built with clarity.</h2>
+              <p class="section-kicker" data-i18n="sectionWorkKicker">
+                Selected work
+              </p>
+              <h2 data-i18n="sectionWorkTitle">
+                Products, platforms, and prototypes built with clarity.
+              </h2>
             </div>
 
             <article class="project-feature project-feature-large reveal">
@@ -113,10 +172,18 @@
 
                   <div class="dashboard-body">
                     <aside class="sidebar">
-                      <span class="sidebar-item active" data-i18n="overview">Overview</span>
-                      <span class="sidebar-item" data-i18n="moderation">Moderation</span>
-                      <span class="sidebar-item" data-i18n="automation">Automation</span>
-                      <span class="sidebar-item" data-i18n="security">Security</span>
+                      <span class="sidebar-item active" data-i18n="overview"
+                        >Overview</span
+                      >
+                      <span class="sidebar-item" data-i18n="moderation"
+                        >Moderation</span
+                      >
+                      <span class="sidebar-item" data-i18n="automation"
+                        >Automation</span
+                      >
+                      <span class="sidebar-item" data-i18n="security"
+                        >Security</span
+                      >
                     </aside>
                     <div class="panel-content">
                       <div class="kpi-row">
@@ -145,10 +212,14 @@
               <div class="project-copy">
                 <div class="project-index">01</div>
                 <p class="project-name">GravityBot</p>
-                <h3 data-i18n="gravityBotTitle">Automation and community platform</h3>
+                <h3 data-i18n="gravityBotTitle">
+                  Automation and community platform
+                </h3>
                 <p data-i18n="gravityBotDescription">
-                  A server-management platform focused on moderation, automation, protection, leveling, and operational
-                  visibility. The work balanced user experience with robust system logic and real-time workflow needs.
+                  A server-management platform focused on moderation,
+                  automation, protection, leveling, and operational visibility.
+                  The work balanced user experience with robust system logic and
+                  real-time workflow needs.
                 </p>
                 <div class="tag-list">
                   <span>Node.js</span>
@@ -159,8 +230,15 @@
                   <span>Docker</span>
                 </div>
                 <div class="project-meta">
-                  <span data-i18n="roleFullStack">Role: Full-stack development</span>
-                  <a href="#contact" aria-label="Request more details about GravityBot" data-i18n="requestDetails">Request details →</a>
+                  <span data-i18n="roleFullStack"
+                    >Role: Full-stack development</span
+                  >
+                  <a
+                    href="#contact"
+                    aria-label="Request more details about GravityBot"
+                    data-i18n="requestDetails"
+                    >Request details →</a
+                  >
                 </div>
               </div>
             </article>
@@ -195,10 +273,13 @@
               <div class="project-copy">
                 <div class="project-index">02</div>
                 <p class="project-name">Ugarit Dashboard</p>
-                <h3 data-i18n="ugaritTitle">Website, user, and content operations dashboard</h3>
+                <h3 data-i18n="ugaritTitle">
+                  Website, user, and content operations dashboard
+                </h3>
                 <p data-i18n="ugaritDescription">
-                  A full-stack management tool for overseeing sites, users, content, and analytics. The interface was
-                  designed to make operational complexity feel structured and readable.
+                  A full-stack management tool for overseeing sites, users,
+                  content, and analytics. The interface was designed to make
+                  operational complexity feel structured and readable.
                 </p>
                 <div class="tag-list">
                   <span>React</span>
@@ -210,8 +291,15 @@
                   <span>Tailwind</span>
                 </div>
                 <div class="project-meta">
-                  <span data-i18n="roleProduct">Role: Product interface + backend logic</span>
-                  <a href="#contact" aria-label="Request more details about Ugarit Dashboard" data-i18n="requestDetails">Request details →</a>
+                  <span data-i18n="roleProduct"
+                    >Role: Product interface + backend logic</span
+                  >
+                  <a
+                    href="#contact"
+                    aria-label="Request more details about Ugarit Dashboard"
+                    data-i18n="requestDetails"
+                    >Request details →</a
+                  >
                 </div>
               </div>
             </article>
@@ -220,9 +308,12 @@
               <article class="project-mini reveal">
                 <div class="project-index">03</div>
                 <p class="project-name">Robotic Hand</p>
-                <h3 data-i18n="roboticHandTitle">Voice-controlled four-finger prototype</h3>
+                <h3 data-i18n="roboticHandTitle">
+                  Voice-controlled four-finger prototype
+                </h3>
                 <p data-i18n="roboticHandDescription">
-                  A personal engineering project combining mechatronics, electronics, CAD-driven design, and motion.
+                  A personal engineering project combining mechatronics,
+                  electronics, CAD-driven design, and motion.
                 </p>
                 <div class="tag-list compact">
                   <span>Arduino</span>
@@ -234,9 +325,12 @@
               <article class="project-mini reveal">
                 <div class="project-index">04</div>
                 <p class="project-name">Developer tools</p>
-                <h3 data-i18n="toolsTitle">Experiments, utilities, and automation</h3>
+                <h3 data-i18n="toolsTitle">
+                  Experiments, utilities, and automation
+                </h3>
                 <p data-i18n="toolsDescription">
-                  Smaller builds spanning automation scripts, APIs, utilities, UI experiments, and engineering prototypes.
+                  Smaller builds spanning automation scripts, APIs, utilities,
+                  UI experiments, and engineering prototypes.
                 </p>
                 <div class="tag-list compact">
                   <span>Node.js</span>
@@ -252,16 +346,21 @@
           <div class="container about-grid">
             <div class="about-copy reveal">
               <p class="section-kicker" data-i18n="sectionAboutKicker">About</p>
-              <h2 data-i18n="sectionAboutTitle">I started with software and grew into engineering.</h2>
+              <h2 data-i18n="sectionAboutTitle">
+                I started with software and grew into engineering.
+              </h2>
               <p data-i18n="aboutParagraph1">
-                My path began in software development, and over time my interest expanded toward engineering and physical
-                systems. I enjoy building products where logic, structure, and real-world constraints meet, whether that
-                means a web platform, an API layer, or a mechanism with moving parts.
+                My path began in software development, and over time my interest
+                expanded toward engineering and physical systems. I enjoy
+                building products where logic, structure, and real-world
+                constraints meet, whether that means a web platform, an API
+                layer, or a mechanism with moving parts.
               </p>
               <p data-i18n="aboutParagraph2">
-                Now I work across software, web applications, automation, databases, mechanical design, and robotics. I’m
-                motivated by curiosity and by the challenge of making systems that are useful, reliable, and thoughtfully
-                designed.
+                Now I work across software, web applications, automation,
+                databases, mechanical design, and robotics. I’m motivated by
+                curiosity and by the challenge of making systems that are
+                useful, reliable, and thoughtfully designed.
               </p>
             </div>
 
@@ -271,11 +370,15 @@
                 <span class="arrow">→</span>
                 <span data-i18n="timelineSoftware">Software</span>
                 <span class="arrow">→</span>
-                <span data-i18n="timelineFullStack">Full-stack development</span>
+                <span data-i18n="timelineFullStack"
+                  >Full-stack development</span
+                >
                 <span class="arrow">→</span>
                 <span data-i18n="timelineEngineering">Engineering</span>
                 <span class="arrow">→</span>
-                <span data-i18n="timelineRobotics">Robotics / physical systems</span>
+                <span data-i18n="timelineRobotics"
+                  >Robotics / physical systems</span
+                >
                 <span class="arrow">→</span>
                 <span data-i18n="timelineNext">What comes next</span>
               </div>
@@ -286,8 +389,12 @@
         <section class="section-pad overlap-section" id="engineering">
           <div class="container">
             <div class="section-heading reveal narrow">
-              <p class="section-kicker" data-i18n="engineeringSectionKicker">Software × Engineering</p>
-              <h2 data-i18n="engineeringSectionTitle">Where product thinking meets physical systems.</h2>
+              <p class="section-kicker" data-i18n="engineeringSectionKicker">
+                Software × Engineering
+              </p>
+              <h2 data-i18n="engineeringSectionTitle">
+                Where product thinking meets physical systems.
+              </h2>
             </div>
 
             <div class="dual-visual reveal">
@@ -324,7 +431,10 @@
               </div>
             </div>
 
-            <div class="blueprint-panel reveal" aria-label="Technical engineering drawing inspired design">
+            <div
+              class="blueprint-panel reveal"
+              aria-label="Technical engineering drawing inspired design"
+            >
               <div class="blueprint-annotations">
                 <span data-i18n="blueprintRadius">R = 40</span>
                 <span data-i18n="blueprintDiameter">Ø32</span>
@@ -348,7 +458,9 @@
           <div class="container">
             <div class="section-heading reveal">
               <p class="section-kicker" data-i18n="journeyKicker">Journey</p>
-              <h2 data-i18n="journeyTitle">Building over time, with a focus on systems and motion.</h2>
+              <h2 data-i18n="journeyTitle">
+                Building over time, with a focus on systems and motion.
+              </h2>
             </div>
 
             <div class="journey-list reveal">
@@ -356,7 +468,10 @@
                 <div class="year" data-i18n="journeyYear1">2023–Present</div>
                 <div class="journey-content">
                   <h3 data-i18n="journeyTitle1">Software Development</h3>
-                  <p data-i18n="journeyText1">Full-stack applications, APIs, automation, bots, and developer tools.</p>
+                  <p data-i18n="journeyText1">
+                    Full-stack applications, APIs, automation, bots, and
+                    developer tools.
+                  </p>
                 </div>
               </article>
 
@@ -364,15 +479,21 @@
                 <div class="year" data-i18n="journeyYear2">2024–Present</div>
                 <div class="journey-content">
                   <h3 data-i18n="journeyTitle2">Mechanical Engineering</h3>
-                  <p data-i18n="journeyText2">Design and Production Engineering studies.</p>
+                  <p data-i18n="journeyText2">
+                    Design and Production Engineering studies.
+                  </p>
                 </div>
               </article>
 
               <article class="journey-item">
                 <div class="year" data-i18n="journeyYear3">2025–Present</div>
                 <div class="journey-content">
-                  <h3 data-i18n="journeyTitle3">Robotics / Hardware Experiments</h3>
-                  <p data-i18n="journeyText3">Arduino, servo systems, sensors, and mechanical concepts.</p>
+                  <h3 data-i18n="journeyTitle3">
+                    Robotics / Hardware Experiments
+                  </h3>
+                  <p data-i18n="journeyText3">
+                    Arduino, servo systems, sensors, and mechanical concepts.
+                  </p>
                 </div>
               </article>
             </div>
@@ -383,12 +504,16 @@
           <div class="container">
             <div class="section-heading reveal narrow">
               <p class="section-kicker" data-i18n="skillsKicker">Skills</p>
-              <h2 data-i18n="skillsTitle">Capabilities across product, platform, and engineering work.</h2>
+              <h2 data-i18n="skillsTitle">
+                Capabilities across product, platform, and engineering work.
+              </h2>
             </div>
 
             <div class="skills-grid reveal">
               <div class="skill-group">
-                <p class="skill-label" data-i18n="softwareEngineering">Software engineering</p>
+                <p class="skill-label" data-i18n="softwareEngineering">
+                  Software engineering
+                </p>
                 <div class="skill-list">
                   <span>JavaScript</span>
                   <span>TypeScript</span>
@@ -440,16 +565,50 @@
         <section class="section-pad current-section">
           <div class="container current-grid reveal">
             <div>
-              <p class="section-kicker" data-i18n="currentlyBuildingKicker">Currently building</p>
-              <h2 data-i18n="currentlyBuildingTitle">Voice-controlled robotic hand</h2>
+              <p class="section-kicker" data-i18n="currentlyBuildingKicker">
+                Currently building
+              </p>
+              <h2 data-i18n="currentlyBuildingTitle">
+                Voice-controlled robotic hand
+              </h2>
             </div>
             <div class="current-body">
               <div class="current-block">
-                <p><strong data-i18n="conceptLabel">Concept:</strong> <span data-i18n="conceptText">A four-finger robotic hand designed around a fixed tabletop mechanism.</span></p>
-                <p><strong data-i18n="stageLabel">Current stage:</strong> <span data-i18n="stageText">Prototyping and refinement through mechanical and electrical iteration.</span></p>
-                <p><strong data-i18n="techLabel">Technologies:</strong> <span data-i18n="techText">Arduino, servo motors, electronics, CAD, mechanical design.</span></p>
-                <p><strong data-i18n="learnLabel">What I’m learning:</strong> <span data-i18n="learnText">Motion control, precision mechanisms, embedded logic, and hardware interaction.</span></p>
-                <p><strong data-i18n="futureLabel">Future direction:</strong> <span data-i18n="futureText">Better articulation, tighter control, and more responsive input behavior.</span></p>
+                <p>
+                  <strong data-i18n="conceptLabel">Concept:</strong>
+                  <span data-i18n="conceptText"
+                    >A four-finger robotic hand designed around a fixed tabletop
+                    mechanism.</span
+                  >
+                </p>
+                <p>
+                  <strong data-i18n="stageLabel">Current stage:</strong>
+                  <span data-i18n="stageText"
+                    >Prototyping and refinement through mechanical and
+                    electrical iteration.</span
+                  >
+                </p>
+                <p>
+                  <strong data-i18n="techLabel">Technologies:</strong>
+                  <span data-i18n="techText"
+                    >Arduino, servo motors, electronics, CAD, mechanical
+                    design.</span
+                  >
+                </p>
+                <p>
+                  <strong data-i18n="learnLabel">What I’m learning:</strong>
+                  <span data-i18n="learnText"
+                    >Motion control, precision mechanisms, embedded logic, and
+                    hardware interaction.</span
+                  >
+                </p>
+                <p>
+                  <strong data-i18n="futureLabel">Future direction:</strong>
+                  <span data-i18n="futureText"
+                    >Better articulation, tighter control, and more responsive
+                    input behavior.</span
+                  >
+                </p>
               </div>
             </div>
           </div>
@@ -458,35 +617,81 @@
         <section class="section-pad contact-section" id="contact">
           <div class="container contact-grid reveal">
             <div class="contact-copy">
-              <p class="section-kicker" data-i18n="sectionContactKicker">Contact</p>
-              <h2 data-i18n="sectionContactTitle">Have something worth building?</h2>
+              <p class="section-kicker" data-i18n="sectionContactKicker">
+                Contact
+              </p>
+              <h2 data-i18n="sectionContactTitle">
+                Have something worth building?
+              </h2>
               <p data-i18n="contactText">
-                I’m interested in product work, engineering-driven software, automation, and projects where software and
-                physical systems meet.
+                I’m interested in product work, engineering-driven software,
+                automation, and projects where software and physical systems
+                meet.
               </p>
               <div class="contact-links">
-                <a href="mailto:abdullah.elchebli@gmail.com">abdullah.elchebli@gmail.com</a>
-                <a href="https://github.com/i-tsx" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/abdullah-el-chebli-244240279/" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a href="https://x.com/ChebliDev" target="_blank" rel="noreferrer">X (twitter)</a>
+                <a href="mailto:abdullah.elchebli@gmail.com"
+                  >abdullah.elchebli@gmail.com</a
+                >
+                <a
+                  href="https://github.com/i-tsx"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/abdullah-el-chebli-244240279/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >LinkedIn</a
+                >
+                <a
+                  href="https://x.com/ChebliDev"
+                  target="_blank"
+                  rel="noreferrer"
+                  >X (twitter)</a
+                >
               </div>
             </div>
 
             <form class="contact-form" novalidate>
               <label>
                 <span data-i18n="formName">Name</span>
-                <input type="text" name="name" data-i18n-placeholder="formNamePlaceholder" placeholder="Your name" aria-label="Your name" />
+                <input
+                  type="text"
+                  name="name"
+                  data-i18n-placeholder="formNamePlaceholder"
+                  placeholder="Your name"
+                  aria-label="Your name"
+                />
               </label>
               <label>
                 <span data-i18n="formEmail">Email</span>
-                <input type="email" name="email" data-i18n-placeholder="formEmailPlaceholder" placeholder="you@example.com" aria-label="Your email" />
+                <input
+                  type="email"
+                  name="email"
+                  data-i18n-placeholder="formEmailPlaceholder"
+                  placeholder="you@example.com"
+                  aria-label="Your email"
+                />
               </label>
               <label>
                 <span data-i18n="formProject">Project details</span>
-                <textarea name="message" rows="5" data-i18n-placeholder="formProjectPlaceholder" placeholder="Tell me about your project" aria-label="Project details"></textarea>
+                <textarea
+                  name="message"
+                  rows="5"
+                  data-i18n-placeholder="formProjectPlaceholder"
+                  placeholder="Tell me about your project"
+                  aria-label="Project details"
+                ></textarea>
               </label>
               <div class="form-actions">
-                <button class="button" type="submit" data-i18n="buttonSendEmail">Send via email</button>
+                <button
+                  class="button"
+                  type="submit"
+                  data-i18n="buttonSendEmail"
+                >
+                  Send via email
+                </button>
               </div>
             </form>
           </div>
@@ -501,7 +706,9 @@
               <span class="brand-text">Abdullah El Chebli</span>
             </div>
             <p data-i18n="footerRole">Full Stack Developer</p>
-            <p data-i18n="footerRole2">Mechanical Design & Production Engineering</p>
+            <p data-i18n="footerRole2">
+              Mechanical Design & Production Engineering
+            </p>
           </div>
 
           <nav class="footer-nav" aria-label="Footer navigation">
@@ -512,16 +719,29 @@
           </nav>
 
           <div class="footer-meta">
-            <a href="mailto:abdullah.elchebli@gmail.com" data-i18n="emailLabel">Email</a>
-            <a href="https://github.com/i-tsx" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/abdullah-el-chebli-244240279/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://x.com/ChebliDev" target="_blank" rel="noreferrer">X</a>
+            <a href="mailto:abdullah.elchebli@gmail.com" data-i18n="emailLabel"
+              >Email</a
+            >
+            <a href="https://github.com/i-tsx" target="_blank" rel="noreferrer"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/abdullah-el-chebli-244240279/"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+            <a href="https://x.com/ChebliDev" target="_blank" rel="noreferrer"
+              >X</a
+            >
           </div>
         </div>
 
         <div class="container footer-bottom">
           <span>© <span id="current-year"></span> Abdullah El Chebli</span>
-          <span data-i18n="footerBuilt">Built from scratch with HTML, CSS &amp; JavaScript.</span>
+          <span data-i18n="footerBuilt"
+            >Built from scratch with HTML, CSS &amp; JavaScript.</span
+          >
         </div>
       </footer>
     </div>
