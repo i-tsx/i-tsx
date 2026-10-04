@@ -24,7 +24,7 @@
 ### 🌟 About Me
 
 - 🔹 Full-stack web developer with **3+ years of experience** in building dynamic applications.  
-- 🎓 Second-year Mechanical Engineering student in **Design and Production** at **Homs University**.  
+- 🎓 Third-year Mechanical Engineering student in **Design and Production** at **Homs University**.  
 - ⚡ Creator of **GravityBot**, a Discord bot active in **5,000+ servers**.  
 - 💡 Passionate about **AI, performance optimization, and scalable backend systems**.  
 - 🖥️ Experienced in modern **frontend frameworks, backend architecture, and database management**.  
@@ -51,7 +51,7 @@
 ### 🏆 Achievements
 
 - **#1 Winner** — UAE AI Competition  
-- Earned **$1,000+** from Discord bots  
+- Earned **$3,000+** from Discord bots  
 
 ---
 
